@@ -1,75 +1,131 @@
-<title>Globe</title>
-<link rel = "stylesheet" href = "Assets/stats.css">
-<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
-<script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
-<script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
-<script src="https://cdn.amcharts.com/lib/4/themes/frozen.js"></script>
-<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
-<script src= "Assets/stats.js"></script>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Globe</title>
+        <link rel = "stylesheet" href = "Assets/stats.css">
+        <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/themes/frozen.js"></script>
+        <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+        <script src= "Assets/stats.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-<video autoplay muted loop class="Video">
-  <source src="Videos/space.mp4" type="video/mp4">
-</video>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <style>
+          #NavBar{
+              font-size:62.5%l
+              }
+              .navbar-custom .navbar-brand,
+              .navbar-custom .navbar-text {
+                color: #1f6600;
+                font-weight:40rem;
+              }
+        </style>
 
-<div id = "chartdiv"></div>
-<div class="totalCO">Total CO2 Emissions in the world: <b>35,753,305,000 tons</b></div>
-<div class = "topTen">Top 10 countries in:<br>total CO2 emissions as of 2016:
-    <br>
-    <ol>
-        <li>China</li>
-        <li>United States of America</li>
-        <li>India</li>
-        <li>Russia</li>
-        <li>Japan</li>
-        <li>Germany</li>
-        <li>Canada</li>
-        <li>Iran</li>
-        <li>South Korea</li>
-        <li>Indonesia</li>
-    </ol>
-</div>
-<div class = "topTenCapita">Top 10 countries in:<br>CO2 emissions per capita as of 2016:
-    <br>
-    <ol>
-        <li>Qatar</li>
-        <li>Montenergo</li>
-        <li>Kuwait</li>
-        <li>Trinidad and Tobago</li>
-        <li>United Arab Emirates</li>
-        <li>Oman</li>
-        <li>Canada</li>
-        <li>Brunei</li>
-        <li>Luxembourg</li>
-        <li>Bahrain</li>
-    </ol>
-</div>
-<div class = "topTenBadChange">Top 10 countries in:<br>increasing their CO2 emissions:
-    <br>
-    <ol>
-        <li>North Korea</li>
-        <li>Mongolia</li>
-        <li>Philippines</li>
-        <li>Nepal</li>
-        <li>Pakistan</li>
-        <li>Sri Lanka</li>
-        <li>Peru</li>
-        <li>Ukraine</li>
-        <li>Laos</li>
-        <li>Cambodia</li>
-    </ol>
-</div>
-<div class = "topTenGoodChange">Top 10 countries in:<br>reducing their CO2 emissions:
-    <br>
-    <ol>
-        <li>United Kingdom</li>
-        <li>Brazil</li>
-        <li>Bulgaria</li>
-        <li>Trinidad and Tobago</li>
-        <li>Ecuador</li>
-        <li>Zimbabwe</li>
-        <li>Botswana</li>
-        <li>Greece</li>
-        <li>Spain</li>
-        <li>Portugal</li>
-    </ol>
-</div>
+
+    </head>
+    <body>
+        <video autoplay muted loop class="Video">
+          <source src="Videos/space.mp4" type="video/mp4">
+        </video>
+        <div id="NavBar">
+        <nav class="navbar navbar-expand-lg navbar-custom sticky-top navbar-light" style="background-color: #80ff80;">
+          <a class="navbar-brand" href="#">Carbon Footprint</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item  ">
+                <a class="nav-link navbar-brand" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link navbar-brand" href="stats.html">Stats <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link navbar-brand" href="#">Calculator <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle navbar-brand" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  About
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">About Page</a>
+                  <a class="dropdown-item" href="#">About Us</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link navbar-brand" href="#">Contact Us <span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+        <div id = "chartdiv"></div>
+        <div class="totalCO">Total CO2 Emissions in the world: <b>35,753,305,000 tons</b></div>
+        <div class = "topTen"><br><br><br>Top 10 countries in:<br>total CO2 emissions as of 2016:
+            <br>
+            <ol>
+                <li>China</li>
+                <li>United States of America</li>
+                <li>India</li>
+                <li>Russia</li>
+                <li>Japan</li>
+                <li>Germany</li>
+                <li>Canada</li>
+                <li>Iran</li>
+                <li>South Korea</li>
+                <li>Indonesia</li>
+            </ol>
+        </div>
+        <div class = "topTenCapita">Top 10 countries in:<br>CO2 emissions per capita as of 2016:
+            <br>
+            <ol>
+                <li>Qatar</li>
+                <li>Montenergo</li>
+                <li>Kuwait</li>
+                <li>Trinidad and Tobago</li>
+                <li>United Arab Emirates</li>
+                <li>Oman</li>
+                <li>Canada</li>
+                <li>Brunei</li>
+                <li>Luxembourg</li>
+                <li>Bahrain</li>
+            </ol>
+        </div>
+        <div class = "topTenBadChange">Top 10 countries in:<br>increasing their CO2 emissions:
+            <br>
+            <ol>
+                <li>North Korea</li>
+                <li>Mongolia</li>
+                <li>Philippines</li>
+                <li>Nepal</li>
+                <li>Pakistan</li>
+                <li>Sri Lanka</li>
+                <li>Peru</li>
+                <li>Ukraine</li>
+                <li>Laos</li>
+                <li>Cambodia</li>
+            </ol>
+        </div>
+        <div class = "topTenGoodChange"><br><br><br>Top 10 countries in:<br>reducing their CO2 emissions:
+            <br>
+            <ol>
+                <li>United Kingdom</li>
+                <li>Brazil</li>
+                <li>Bulgaria</li>
+                <li>Trinidad and Tobago</li>
+                <li>Ecuador</li>
+                <li>Zimbabwe</li>
+                <li>Botswana</li>
+                <li>Greece</li>
+                <li>Spain</li>
+                <li>Portugal</li>
+            </ol>
+        </div>
+    </body>
+</html>

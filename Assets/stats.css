@@ -3,10 +3,11 @@
     min-height: 100vh;
     min-width: 100vh;
 }
-html,body{    
+html,body{
+
     margin: 0px;
     padding: 0px;
-    font: bold 12px/20px Georgia, sans-serif;    
+    font: bold 12px/20px Georgia, sans-serif;
 }
 #chartdiv {
     height: 60em;
@@ -22,47 +23,47 @@ g[role="group"]{
     transform: scale(1);
 }
 div.topTen{
-    font-size: 1.5em;
+    font-size: 1.0em;
     color: white;
     text-align: left;
     padding: 10px;
     top: 0;
     left: 0;
     position: fixed;
-    animation-duration: 8s;
+    animation-duration: 4s;
     animation-name: fadeout;
     overflow: hidden;
 }
 div.topTenCapita{
-    font-size: 1.5em;
+    font-size: 1.0em;
     color: white;
     bottom: 0;
     left: 0;
     padding: 10px;
     position: fixed;
-    animation-duration: 8s;
+    animation-duration: 4s;
     animation-name: fadeout;
     overflow: hidden;
 }
 div.topTenGoodChange{
-    font-size: 1.5em;
+    font-size: 1.0em;
     color: white;
     top: 0;
     right: 0;
     padding: 10px;
     position: fixed;
-    animation-duration: 8s;
+    animation-duration: 4s;
     animation-name: fadeout;
     overflow: hidden;
 }
 div.topTenBadChange{
-    font-size: 1.5em;
+    font-size: 1.0em;
     color: white;
     bottom: 0;
     right: 0;
     padding: 10px;
     position: fixed;
-    animation-duration: 8s;
+    animation-duration: 4s;
     animation-name: fadeout;
     overflow: hidden;
 }
@@ -101,7 +102,7 @@ div.totalCO{
     .topTenBadChange, .topTenGoodChange, .topTen, .topTenCapita{
         display:none;
     }
-} 
+}
 @media screen and (max-height: 680px){
     .topTenBadChange, .topTenGoodChange, .topTen, .topTenCapita{
         display: none;
