@@ -24,25 +24,18 @@ main{
     overflow: hidden;
     transform: none;
 }
-path, g {
-    position: relative;
-    transform: none;
-    align-content: center;
-}
 g[role="group"]{
     transform: scale(1);
     position: relative;
 }
-@media screen and (max-width:1024px) {
-    #chartdiv{
-        margin-left: 2.5%;
+@media screen and (min-width:1024px) {
+    path, g {
+        position: relative;
+        transform: none;
+        align-content: center;
     }
 }
-@media screen and (max-height:680px) {
-    #chartdiv{
-        margin-left: 2.5%;
-    }
-}
+
 
 
 

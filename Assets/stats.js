@@ -262,8 +262,9 @@ for(var obj in polygonSeries.data) {
 }
 // Configure series
 var polygonTemplate = polygonSeries.mapPolygons.template;
-polygonTemplate.tooltipText = "{name} \n CO2 emission(in tons): {value1} \n % contribution to total world emissions name: {value2}";
+polygonTemplate.tooltipText = "[bold]{name}[/] \n CO2 emission(in tons): [bold]{value1}[/] \n % contribution to total world emissions name: [bold]{value2}[/]";
 
+    
 polygonTemplate.propertyFields.fill = "color";
 polygonTemplate.stroke = am4core.color("#454a58");
 polygonTemplate.strokeWidth = 0.5;
@@ -275,7 +276,7 @@ graticuleSeries.mapLines.template.line.strokeOpacity = 0;
 graticuleSeries.fitExtent = false;
 
 
-chart.backgroundSeries.mapPolygons.template.polygon.fillOpacity = 0;
+chart.backgroundSeries.mapPolygons.template.polygon.fillOpacity = 1;
 chart.backgroundSeries.mapPolygons.template.polygon.fill = am4core.color("#141452");
 
 // Create hover state and set alternative fill color
