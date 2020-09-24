@@ -1,126 +1,48 @@
-.Video {
-    position: fixed;
-    min-height: 100vh;
-    min-width: 100vh;
+body{
+    width:100%;
+    height: 100vh;
+    background-image: url('Images/andy-holmes-rCbdp8VCYhQ-unsplash.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-content: center;
 }
-#bodymain{
-
-    margin: 0px;
-    padding: 0px;
-    font: bold 12px/20px Georgia, sans-serif;
+.mainSection{
+    display: grid;
+    grid-template-rows: 100%;
+}
+main{
+    display: grid;
+    grid-template-rows: 100%;
 }
 #chartdiv {
-    height: 60em;
-    width: 60em;
+    height: 90%;
+    width: 100%;
+    margin: auto;
+    margin-top: 1%;
+    margin-left: 1%;
     position: fixed;
-    margin-bottom: 0%;
-    margin-left: 28%;
-    margin-top: 3%;
-    margin-right: 22%;
     overflow: hidden;
+    transform: none;
+}
+path, g {
+    position: relative;
+    transform: none;
+    align-content: center;
 }
 g[role="group"]{
     transform: scale(1);
-}
-div.topTen{
-    font-size: 1.0em;
-    color: white;
-    text-align: left;
-    padding: 10px;
-    top: 0;
-    left: 0;
-    position: fixed;
-    animation-duration: 4s;
-    animation-name: fadeout;
-    overflow: hidden;
-}
-div.topTenCapita{
-    font-size: 1.0em;
-    color: white;
-    bottom: 0;
-    left: 0;
-    padding: 10px;
-    position: fixed;
-    animation-duration: 4s;
-    animation-name: fadeout;
-    overflow: hidden;
-}
-div.topTenGoodChange{
-    font-size: 1.0em;
-    color: white;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    position: fixed;
-    animation-duration: 4s;
-    animation-name: fadeout;
-    overflow: hidden;
-}
-div.topTenBadChange{
-    font-size: 1.0em;
-    color: white;
-    bottom: 0;
-    right: 0;
-    padding: 10px;
-    position: fixed;
-    animation-duration: 4s;
-    animation-name: fadeout;
-    overflow: hidden;
-}
-li {
-    margin-bottom: 0.3em;
-}
-div.totalCO{
-    animation-duration: 50s;
-    animation-name: moveout;
-    text-align: center;
-}
-@keyframes fadeout{
-    from{
-        opacity: 0;
-        font-size: 0px;
-    }
-    to{
-        opacity: 1;
-        font-size: 1.5em;
-    }
-}
-@keyframes moveout{
-    from{
-        opacity: 1;
-        color: chartreuse;
-        font-size: 20px;
-    }
-    25% {
-        color:midnightblue;
-    } to {
-        opacity: 0;
-        font-size: 0px;
-    }
-}
-@media screen and (max-width: 1024px){
-    .topTenBadChange, .topTenGoodChange, .topTen, .topTenCapita{
-        display:none;
-    }
-}
-@media screen and (max-height: 680px){
-    .topTenBadChange, .topTenGoodChange, .topTen, .topTenCapita{
-        display: none;
-    }
+    position: relative;
 }
 @media screen and (max-width:1024px) {
     #chartdiv{
-        margin-top: 40%;
-        margin-left: 13%;
-        margin-right: 0;
-        margin-bottom: 10%;
+        margin-left: 2.5%;
     }
 }
 @media screen and (max-height:680px) {
     #chartdiv{
-        margin-top: 40%;
-        margin-left: 15%;
-        margin-right: 0;
-        margin-bottom: 10%;
+        margin-left: 2.5%;
     }
 }
+
+
+
