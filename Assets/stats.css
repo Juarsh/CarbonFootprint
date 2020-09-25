@@ -15,26 +15,25 @@ main{
     grid-template-rows: 100%;
 }
 #chartdiv {
-    height: 90%;
-    width: 100%;
+    height: 89%;
+    width: 99%;
     margin: auto;
     margin-top: 1%;
     margin-left: 1%;
     position: fixed;
     overflow: hidden;
-    transform: none;
+    transform: translate(0,0,0,0);
+}
+path, g {
+    position: relative;
+    transform: translate(0,0,0,0);
+    align-content: center;
 }
 g[role="group"]{
     transform: scale(1);
     position: relative;
 }
-@media screen and (min-width:1024px) {
-    path, g {
-        position: relative;
-        transform: none;
-        align-content: center;
-    }
-}
+
 
 
 

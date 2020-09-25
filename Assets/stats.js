@@ -262,7 +262,7 @@ for(var obj in polygonSeries.data) {
 }
 // Configure series
 var polygonTemplate = polygonSeries.mapPolygons.template;
-polygonTemplate.tooltipText = "[bold]{name}[/] \n CO2 emission(in tons): [bold]{value1}[/] \n % contribution to total world emissions name: [bold]{value2}[/]";
+polygonTemplate.tooltipText = "[bold]{name}[/] \n CO2 emission(in tons): [bold]{value1}[/] \n % contribution to\ntotal world emissions: [bold]{value2}[/]";
 
     
 polygonTemplate.propertyFields.fill = "color";
